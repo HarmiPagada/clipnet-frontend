@@ -10330,3 +10330,25 @@ input:checked+.slider:before {
     border-color: #374151;
     color: #9ca3af;
 }
+
+
+
+
+
+
+
+
+
+/* Sidebar slide animation */
+.right-sidebar {
+    transition: transform 0.15s ease-in-out;
+    transform: translateX(-100%); /* Hidden by default */
+}
+
+.right-sidebar.open {
+    transform: translateX(0); /* Slide in */
+}
+
+.right-sidebar.closed {
+    transform: translateX(-100%); /* Slide out */
+}
