@@ -1,1 +1,1 @@
-export const BASE_PATH = "/"; // Replace with your actual base path
+export const BASE_PATH = ""; // Replace with your actual base path
