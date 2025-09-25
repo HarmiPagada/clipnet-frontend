@@ -1,1 +1,1 @@
-export const BASE_PATH = "http://localhost:3000"; // Replace with your actual base path
+export const BASE_PATH = "/"; // Replace with your actual base path
