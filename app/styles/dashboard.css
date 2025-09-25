@@ -10346,7 +10346,7 @@ input:checked+.slider:before {
 
 .right-sidebar {
   width: 60px; /* closed width */
-  transition: width 0.3s ease;
+  transition: width 0.7s ease;
   overflow: hidden;
 }
 
