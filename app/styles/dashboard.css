@@ -10339,16 +10339,18 @@ input:checked+.slider:before {
 
 
 
-/* Sidebar slide animation */
+/* .right-sidebar , .right-sidebar.closed , .right-sidebar.open{
+    transition: width 0.3s ease-in-out;
+} */
+
+
 .right-sidebar {
-    transition: transform 0.15s ease-in-out;
-    transform: translateX(-100%); /* Hidden by default */
+  width: 60px; /* closed width */
+  transition: width 0.3s ease;
+  overflow: hidden;
 }
 
 .right-sidebar.open {
-    transform: translateX(0); /* Slide in */
+  width: 240px; /* open width */
 }
 
-.right-sidebar.closed {
-    transform: translateX(-100%); /* Slide out */
-}
