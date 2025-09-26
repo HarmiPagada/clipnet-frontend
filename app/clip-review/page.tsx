@@ -122,16 +122,16 @@ export default function ClipReview() {
   };
 
   return (
-    <div>
-      <Header 
-          darkMode={darkMode}
-          onToggleDarkMode={toggleDarkMode}
-        />
+    // <div>
+    //   <Header 
+    //       darkMode={darkMode}
+    //       onToggleDarkMode={toggleDarkMode}
+    //     />
 
-      <main>
-        <div className="container">
-          <div className="main-content">
-            <Sidebar/>
+    //   <main>
+    //     <div className="container">
+    //       <div className="main-content">
+    //         <Sidebar/>
 
             <div className="left-content d-flex flex-column">
 
@@ -466,9 +466,10 @@ export default function ClipReview() {
               </div>
 
             </div>
-          </div>
-        </div>
-      </main>
-    </div>
+
+    //       </div>
+    //     </div>
+    //   </main>
+    // </div>
   )
 }

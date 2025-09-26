@@ -43,16 +43,16 @@ export default function Myteam() {
   }
 
   return (
-    <div>
+    // <div>
    
-        <Header 
-          darkMode={darkMode}
-          onToggleDarkMode={toggleDarkMode}
-        />
-            <main>
-                <div className="container">
-                    <div className="main-content">
-                        <Sidebar/>
+    //     <Header 
+    //       darkMode={darkMode}
+    //       onToggleDarkMode={toggleDarkMode}
+    //     />
+    //         <main>
+    //             <div className="container">
+    //                 <div className="main-content">
+    //                     <Sidebar/>
 
                         <div className="left-content">
 
@@ -213,10 +213,10 @@ export default function Myteam() {
 
                         </div>
 
-                    </div>
-                </div>
-            </main>
-    </div>
+    //                 </div>
+    //             </div>
+    //         </main>
+    // </div>
 
   )
 }

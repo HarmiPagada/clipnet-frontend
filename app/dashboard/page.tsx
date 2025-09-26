@@ -215,19 +215,18 @@ export default function DashboardPage() {
   }, []);
 
   return (
-    <div>
+    // <div>
 
-      <Header 
-        darkMode={darkMode}
-        onToggleDarkMode={toggleDarkMode}
-      />
-      <main>
-        <div className="container">
-          <div className="main-content">
-            <Sidebar/>
+    //   <Header 
+    //     darkMode={darkMode}
+    //     onToggleDarkMode={toggleDarkMode}
+    //   />
+    //   <main>
+    //     <div className="container">
+    //       <div className="main-content">
+    //         <Sidebar/>
 
-              {/* Main Dashboard */}
-              {/* <div className="dashboard-section"> */}
+             
               <div className="left-content">
 
                 {/* Header */}
@@ -475,11 +474,11 @@ export default function DashboardPage() {
                 </div>
               </div>
 
-          </div>
-        </div>
-      </main>
+    //       </div>
+    //     </div>
+    //   </main>
 
-    </div>
+    // </div>
   
   )
 }

@@ -6,49 +6,23 @@ import { useRouter } from 'next/navigation'
 // import './dashboard.css'
 import '../styles/dashboard.css';
 
-import Header from '@/components/Header'
-import Sidebar from '@/components/Sidebar'
-
 //slider
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 
-export default function DashboardPage() {
+export default function MyClips() {
 
    const router = useRouter()
-    const [darkMode, setDarkMode] = useState<boolean>(false)
-  
-    // Load dark mode preference on component mount
-    useEffect(() => {
-      const savedDarkMode = localStorage.getItem('darkMode')
-      if (savedDarkMode === 'enabled') {
-        setDarkMode(true)
-        document.body.classList.add('dark-mode')
-      }
-    }, [])
-  
-    // Toggle dark mode
-    const toggleDarkMode = (isDark: boolean) => {
-      setDarkMode(isDark)
-      if (isDark) {
-        document.body.classList.add('dark-mode')
-        localStorage.setItem('darkMode', 'enabled')
-      } else {
-        document.body.classList.remove('dark-mode')
-        localStorage.setItem('darkMode', 'disabled')
-      }
-    }
 
+  // REMOVED: All localStorage and darkMode code since ClientLayout handles it
+  
   const handleSignOut = () => {
-    // Remove auth cookie/token
     clearAuthToken();
-    
-    // Redirect to login
     router.push('/auth/login')
   }
 
@@ -57,14 +31,14 @@ export default function DashboardPage() {
   const [currentSlide2, setCurrentSlide2] = useState<number>(1);
   const [currentSlidesPerView1, setCurrentSlidesPerView1] = useState<number>(5);
   const [currentSlidesPerView2, setCurrentSlidesPerView2] = useState<number>(5);
-  const totalSlides: number = 9; // Total number of slides
+  const totalSlides: number = 9;
 
   // Function to calculate total pages based on slides per view
   const getTotalPages = (totalSlides: number, slidesPerView: number): number => {
     return Math.max(1, totalSlides - slidesPerView + 1);
   };
 
-  // Responsive breakpoints for Swiper - use any type to avoid TypeScript conflicts
+  // Responsive breakpoints for Swiper
   const swiperBreakpoints: any = {
     1700: { slidesPerView: 5 },
     1281: { slidesPerView: 4 },
@@ -73,7 +47,7 @@ export default function DashboardPage() {
     0: { slidesPerView: 1 },
   };
 
-  // Handle slide change functions with proper typing
+  // Handle slide change functions
   const handleSlideChange1 = (swiper: any) => {
     setCurrentSlide1(swiper.activeIndex + 1);
   };
@@ -91,17 +65,17 @@ export default function DashboardPage() {
   };
 
   return (
-    <div>
+    // <div>
 
-      <Header 
-          darkMode={darkMode}
-          onToggleDarkMode={toggleDarkMode}
-        />
+    //   <Header 
+    //       darkMode={darkMode}
+    //       onToggleDarkMode={toggleDarkMode}
+    //     />
 
-      <main>
-        <div className="container">
-          <div className="main-content">
-            <Sidebar/>
+    //   <main>
+    //     <div className="container">
+    //       <div className="main-content">
+    //         <Sidebar/>
 
             <div className="left-content">
                     <div className="clip-review-header">
@@ -602,11 +576,11 @@ export default function DashboardPage() {
                     </div>
             </div>
 
-          </div>
-        </div>
-      </main>
+    //       </div>
+    //     </div>
+    //   </main>
 
-    </div>
+    // </div>
   
   )
 }

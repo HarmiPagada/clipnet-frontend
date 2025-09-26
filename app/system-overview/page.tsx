@@ -148,15 +148,15 @@ export default function MyAi() {
   }
 
   return (
-    <div>
-      <Header 
-        darkMode={darkMode}
-        onToggleDarkMode={toggleDarkMode}
-      />
-      <main>
-        <div className="container">
-          <div className="main-content">
-            <Sidebar/>
+    // <div>
+    //   <Header 
+    //     darkMode={darkMode}
+    //     onToggleDarkMode={toggleDarkMode}
+    //   />
+    //   <main>
+    //     <div className="container">
+    //       <div className="main-content">
+    //         <Sidebar/>
 
             <div className="left-content d-flex flex-column">
 
@@ -275,9 +275,9 @@ export default function MyAi() {
 
             </div>
 
-          </div>
-        </div>
-      </main>
-    </div>
+    //       </div>
+    //     </div>
+    //   </main>
+    // </div>
   )
 }

@@ -6,8 +6,6 @@ import { useRouter } from 'next/navigation'
 // import './dashboard.css'
 import './styles/dashboard.css';
 
-import Header from '@/components/Header'
-import Sidebar from '@/components/Sidebar'
 
 //slider
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -47,17 +45,7 @@ export default function DashboardPage() {
     }
   }, [])
 
-  // Toggle dark mode
-  const toggleDarkMode = (isDark: boolean) => {
-    setDarkMode(isDark)
-    if (isDark) {
-      document.body.classList.add('dark-mode')
-      localStorage.setItem('darkMode', 'enabled')
-    } else {
-      document.body.classList.remove('dark-mode')
-      localStorage.setItem('darkMode', 'disabled')
-    }
-  }
+  
 
   const handleSignOut = () => {
     // Remove auth cookie/token
@@ -110,17 +98,18 @@ export default function DashboardPage() {
   };
 
   return (
-    <div>
+    // <div>
 
-      <Header 
-        darkMode={darkMode}
-        onToggleDarkMode={toggleDarkMode}
-      />
-      <main>
-        <div className="container">
-          <div className="main-content">
-            <Sidebar/>
+    //   <Header 
+    //     darkMode={darkMode}
+    //     onToggleDarkMode={toggleDarkMode}
+    //   />
+    //   <main>
+    //     <div className="container">
+    //       <div className="main-content">
+    //         <Sidebar/>
 
+          
             <div className="left-content">
                 <div className="clip-review-header">
 
@@ -689,11 +678,11 @@ export default function DashboardPage() {
       
             </div>
 
-          </div>
-        </div>
-      </main>
+    //       </div>
+    //     </div>
+    //   </main>
 
-    </div>
+    // </div>
   
   )
 }

@@ -159,12 +159,12 @@ const UserManagement: React.FC = () => {
   )
 
   return (
-    <div>
-      <Header darkMode={darkMode} onToggleDarkMode={toggleDarkMode} />
-      <main>
-        <div className="container">
-          <div className="main-content">
-            <Sidebar />
+    // <div>
+    //   <Header darkMode={darkMode} onToggleDarkMode={toggleDarkMode} />
+    //   <main>
+    //     <div className="container">
+    //       <div className="main-content">
+    //         <Sidebar />
 
             <div className="left-content d-flex flex-column">
               <div className="clip-review-header">
@@ -211,10 +211,11 @@ const UserManagement: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </main>
-    </div>
+
+    //       </div>
+    //     </div>
+    //   </main>
+    // </div>
   )
 }
 

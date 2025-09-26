@@ -298,15 +298,15 @@ export default function MyAi() {
   const [feedbackReason, setFeedbackReason] = useState("tone_off");
   
   return (
-    <div>
-        <Header 
-          darkMode={darkMode}
-          onToggleDarkMode={toggleDarkMode}
-        />
-        <main>
-            <div className="container">
-                <div className="main-content">
-                    <Sidebar/>
+    // <div>
+    //     <Header 
+    //       darkMode={darkMode}
+    //       onToggleDarkMode={toggleDarkMode}
+    //     />
+    //     <main>
+    //         <div className="container">
+    //             <div className="main-content">
+    //                 <Sidebar/>
 
                     <div className="left-content d-flex flex-column">
                         <div className="clip-review-header">
@@ -1035,10 +1035,11 @@ export default function MyAi() {
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </main>
-    </div>
+
+    //             </div>
+    //         </div>
+    //     </main>
+    // </div>
 
   )
 }

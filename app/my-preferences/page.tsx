@@ -144,16 +144,16 @@ export default function MyPreferences() {
   ];
 
   return (
-    <div>
+    // <div>
    
-        <Header 
-          darkMode={darkMode}
-          onToggleDarkMode={toggleDarkMode}
-        />
-            <main>
-                <div className="container">
-                    <div className="main-content">
-                        <Sidebar/>
+    //     <Header 
+    //       darkMode={darkMode}
+    //       onToggleDarkMode={toggleDarkMode}
+    //     />
+    //         <main>
+    //             <div className="container">
+    //                 <div className="main-content">
+    //                     <Sidebar/>
 
                         <div className="left-content d-flex flex-column">
 
@@ -262,11 +262,11 @@ export default function MyPreferences() {
                             
                         </div>
                                         
-                    </div>
-                </div>
-            </main>
+    //                 </div>
+    //             </div>
+    //         </main>
 
-    </div>
+    // </div>
 
   )
 }

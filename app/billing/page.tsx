@@ -46,20 +46,19 @@ export default function Billing() {
 
 
   return (
-    <div>
+    // <div>
    
-        <Header 
-          darkMode={darkMode}
-          onToggleDarkMode={toggleDarkMode}
-        />
-            <main>
-                <div className="container">
-                    <div className="main-content">
-                        <Sidebar/>
+    //     <Header 
+    //       darkMode={darkMode}
+    //       onToggleDarkMode={toggleDarkMode}
+    //     />
+    //         <main>
+    //             <div className="container">
+    //                 <div className="main-content">
+    //                     <Sidebar/>
 
                         <div className="left-content d-flex flex-column">
                           
-
                           {/* Updated JSX code with custom CSS classes */}
                             <div className="content-wrapper">
                             <div className="clip-review-header">
@@ -174,10 +173,10 @@ export default function Billing() {
 
                         </div>
 
-                    </div>
-                </div>
-            </main>
-    </div>
+    //                 </div>
+    //             </div>
+    //         </main>
+    // </div>
 
   )
 }

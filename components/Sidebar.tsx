@@ -5,13 +5,11 @@ import Link from 'next/link';
 import { Settings as SettingsIcon, Users as UsersIcon, CreditCard as CreditCardIcon, Shield as ShieldIcon } from 'lucide-react';
 import { Film, LayoutTemplate, UserCircle2 } from 'lucide-react';
 
-
-
 import { BASE_PATH } from "../src/config";
 
 export default function Sidebar() {
 
-     const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     // Initialize sidebar state from localStorage on component mount
     useEffect(() => {
@@ -76,18 +74,18 @@ export default function Sidebar() {
             <div className={`right-sidebar ${isOpen ? 'open' : 'closed'}`}>
                 <div className="sidebar-items">
                     <div className="sidebar-toggle" onClick={toggleSidebar}>
-                        <a href="#">
+                        <Link href="#">
                             <img src="/assets/images/sidebar.svg" alt="Hamburger Icon" />
-                        </a>
+                        </Link>
                     </div>
 
                     <ul className="right-sidebar-menu">
                         <li className="icon-item dashboard-icon">
-                            <a href={`${BASE_PATH}/dashboard`}>
+                            <Link href={`${BASE_PATH}/dashboard`}>
                                 {/* <img src={`${BASE_PATH}assets/images/dashboard.png" alt="Dashboard Icon" /> */}
                                 <img src={`${BASE_PATH}/assets/images/dashboard.png`} alt="Dashboard Icon" />
                                 <span className="icon-text">Dashboard</span>
-                            </a>
+                            </Link>
                         </li>
 
                         <div className="sidebar-item" ref={ref}>
@@ -158,31 +156,31 @@ export default function Sidebar() {
                         </div>
 
                         <li className="icon-item">
-                            <a href="/my-ai">
+                            <Link href="/my-ai">
                                 <img src={`${BASE_PATH}/assets/images/my ai.png`} alt="AI Icon" />
                                 <span className="icon-text">My AI</span>
-                            </a>
+                            </Link>
                         </li>
                         
                         <li className="icon-item">
-                            <a href="/my-team">
+                            <Link href="/my-team">
                                 <img src={`${BASE_PATH}/assets/images/my team.png`} alt="Team Icon" />
                                 <span className="icon-text">My Team</span>
-                            </a>
+                            </Link>
                         </li>
                         
                         <li className="icon-item">
-                            <a href="/my-preferences">
+                            <Link href="/my-preferences">
                                 <img src={`${BASE_PATH}/assets/images/settings.png`} alt="Settings Icon" />
                                 <span className="icon-text">My Preferences</span>
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="icon-item">
-                            <a href="/trainer">
+                            <Link href="/trainer">
                                 <img src={`${BASE_PATH}/assets/images/trainer.png`} alt="Settings Icon" />
                                 <span className="icon-text">Trainer</span>
-                            </a>
+                            </Link>
                         </li>
 
                         <ul className="sidebar-menu">
@@ -208,14 +206,14 @@ export default function Sidebar() {
                                 {menuOpen && (
                                 <ul className="dropdown">
                                     <li className="icon-item">
-                                        <a href="/system-overview">
+                                        <Link href="/system-overview">
                                             <img src={`${BASE_PATH}/assets/images/system-overview.png`} alt="System" />
                                             <span className="icon-text dropdown-text">System Overview</span>
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li className="icon-item">
-                                        <a href="/job-queue">
+                                        <Link href="/job-queue">
                                             <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 24 24"
@@ -232,25 +230,25 @@ export default function Sidebar() {
                                             <line x1="6" x2="6.01" y1="18" y2="18"></line>
                                             </svg>
                                             <span className="icon-text dropdown-text">Job Queue</span>
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li className="icon-item">
-                                        <a href="/logs-errors">
+                                        <Link href="/logs-errors">
                                             <i className="fa-solid fa-triangle-exclamation"></i>
                                             <span className="icon-text dropdown-text">Logs & Errors</span>
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li className="icon-item">
-                                        <a href="/alerts">
+                                        <Link href="/alerts">
                                             <i className="fa-regular fa-bell"></i>
                                             <span className="icon-text dropdown-text">Alerts</span>
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li className="icon-item">
-                                        <a href="/audit-log">
+                                        <Link href="/audit-log">
                                             <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 24 24"
@@ -263,7 +261,7 @@ export default function Sidebar() {
                                             <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
                                             </svg>
                                             <span className="icon-text dropdown-text">Audit Log</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                                 )}
@@ -296,35 +294,35 @@ export default function Sidebar() {
                                 {crmOpen && (
                                 <ul className="dropdown pl-6 mt-2 space-y-1">
                                     <li className="icon-item">
-                                        <a href="/user-management" className="flex items-center space-x-2">
+                                        <Link href="/user-management" className="flex items-center space-x-2">
                                             <UsersIcon className="w-5 h-5" />
                                             <span className="icon-text dropdown-text">User Management</span>
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li className="icon-item">
-                                        <a href="/billing" className="flex items-center space-x-2">
+                                        <Link href="/billing" className="flex items-center space-x-2">
                                             <CreditCardIcon className="w-5 h-5" />
                                             <span className="icon-text dropdown-text">Billing</span>
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li className="icon-item">
-                                        <a href="/support-tools" className="flex items-center space-x-2">
+                                        <Link href="/support-tools" className="flex items-center space-x-2">
                                             <SettingsIcon className="w-5 h-5" />
                                             <span className="icon-text dropdown-text">Support Tools</span>
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li className="icon-item">
-                                        <a href="/compliance" className="flex items-center space-x-2">
+                                        <Link href="/compliance" className="flex items-center space-x-2">
                                             <ShieldIcon className="w-5 h-5" />
                                             <span className="icon-text dropdown-text">Compliance</span>
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li className="icon-item">
-                                        <a href="/audit-log">
+                                        <Link href="/audit-log">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
@@ -343,7 +341,7 @@ export default function Sidebar() {
                                                 <path d="M16 17H8" />
                                             </svg>
                                             <span className="icon-text dropdown-text">Audit Log</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                                 )}

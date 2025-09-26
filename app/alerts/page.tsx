@@ -8,9 +8,6 @@ import { Settings, AlertCircle, AlertTriangle } from 'lucide-react'
 
 import '../styles/dashboard.css'
 
-import Header from '@/components/Header'
-import Sidebar from '@/components/Sidebar'
-
 
 export default function Alerts() {
   const router = useRouter()
@@ -25,18 +22,7 @@ export default function Alerts() {
     }
   }, [])
 
-  // Toggle dark mode
-  const toggleDarkMode = (isDark: boolean) => {
-    setDarkMode(isDark)
-    if (isDark) {
-      document.body.classList.add('dark-mode')
-      localStorage.setItem('darkMode', 'enabled')
-    } else {
-      document.body.classList.remove('dark-mode')
-      localStorage.setItem('darkMode', 'disabled')
-    }
-  }
-
+  
   const handleSignOut = () => {
     // Remove auth cookie/token
     clearAuthToken()
@@ -47,16 +33,16 @@ export default function Alerts() {
 
   
   return (
-    <div>
-      <Header 
-        darkMode={darkMode}
-        onToggleDarkMode={toggleDarkMode}
-      />
+    // <div>
+    //   <Header 
+    //     darkMode={darkMode}
+    //     onToggleDarkMode={toggleDarkMode}
+    //   />
       
-      <main>
-        <div className="container">
-          <div className="main-content">
-            <Sidebar />
+    //   <main>
+    //     <div className="container">
+    //       <div className="main-content">
+    //         <Sidebar />
 
             <div className="left-content d-flex flex-column">
               <div className="clip-review-header">
@@ -129,9 +115,12 @@ export default function Alerts() {
            
 
             </div>
-          </div>
-        </div>
-      </main>
-    </div>
+            
+
+    //       </div>
+    //     </div>
+    //   </main>
+    // </div>
+
   )
 }
