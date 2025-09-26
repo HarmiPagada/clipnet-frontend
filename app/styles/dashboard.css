@@ -6649,9 +6649,6 @@ input:checked+.slider:before {
     cursor: pointer;
 }
 
-.export-button:hover {
-    background-color: #047857;
-}
 
 .export-icon {
     width: 1rem;
