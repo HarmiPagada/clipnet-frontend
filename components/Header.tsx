@@ -247,25 +247,25 @@ const Header: React.FC<HeaderProps> = ({ darkMode, onToggleDarkMode }) => {
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
                 </div>
 
                 {dropdown && (
                   <ul className="nav-menu ml-6 mt-2 space-y-1">
-                    <li className="nav-item">
-                      <Link href="/my-clips" onClick={closeMobileMenu}>
+                    <li className="nav-item py-1">
+                      <Link href="/my-clips" onClick={closeMobileMenu} className="flex items-center gap-2">
                         My Clips
                       </Link>
                     </li>
-                    <li className="nav-item">
-                      <Link href="#" onClick={closeMobileMenu}>
+                    <li className="nav-item py-1">
+                      <Link href="#" onClick={closeMobileMenu} className="flex items-center gap-2">
                         My Templates
                       </Link>
                     </li>
-                    <li className="nav-item">
-                      <Link href="#" onClick={closeMobileMenu}>
+                    <li className="nav-item py-1">
+                      <Link href="#" onClick={closeMobileMenu} className="flex items-center gap-2">
                         Community
                       </Link>
                     </li>
@@ -320,11 +320,11 @@ const Header: React.FC<HeaderProps> = ({ darkMode, onToggleDarkMode }) => {
 
                 {menuOpen && (
                   <ul className="nav-menu ml-6 mt-2 space-y-1">
-                    <li><Link href="/system-overview">System Overview</Link></li>
-                    <li><Link href="/job-queue">Job Queue</Link></li>
-                    <li><Link href="/logs-errors">Logs & Errors</Link></li>
-                    <li><Link href="/alerts">Alerts</Link></li>
-                    <li><Link href="/audit-log">Audit Log</Link></li>
+                    <li className="py-1"><Link href="/system-overview" onClick={closeMobileMenu}>System Overview</Link></li>
+                    <li className="py-1"><Link href="/job-queue" onClick={closeMobileMenu}>Job Queue</Link></li>
+                    <li className="py-1"><Link href="/logs-errors" onClick={closeMobileMenu}>Logs & Errors</Link></li>
+                    <li className="py-1"><Link href="/alerts" onClick={closeMobileMenu}>Alerts</Link></li>
+                    <li className="py-1"><Link href="/audit-log" onClick={closeMobileMenu}>Audit Log</Link></li>
                   </ul>
                 )}
               </li>
@@ -347,15 +347,16 @@ const Header: React.FC<HeaderProps> = ({ darkMode, onToggleDarkMode }) => {
 
                 {crmOpen && (
                   <ul className="nav-menu ml-6 mt-2 space-y-1">
-                    <li><Link href="/user-management">User Management</Link></li>
-                    <li><Link href="/billing">Billing</Link></li>
-                    <li><Link href="/support-tools">Support Tools</Link></li>
-                    <li><Link href="/compliance">Compliance</Link></li>
-                    <li><Link href="/audit-log">Audit Log</Link></li>
+                    <li className='crm-dropdown'><Link href="/user-management" onClick={closeMobileMenu}>User Management</Link></li>
+                    <li className='crm-dropdown'><Link href="/billing" onClick={closeMobileMenu}>Billing</Link></li>
+                    <li className='crm-dropdown'><Link href="/support-tools" onClick={closeMobileMenu}>Support Tools</Link></li>
+                    <li className='crm-dropdown'><Link href="/compliance" onClick={closeMobileMenu}>Compliance</Link></li>
+                    <li className='crm-dropdown'><Link href="/audit-log" onClick={closeMobileMenu}>Audit Log</Link></li>
                   </ul>
                 )}
               </li>
             </ul>
+
           </div>
 
           {/* Quick Actions */}
@@ -401,38 +402,30 @@ const Header: React.FC<HeaderProps> = ({ darkMode, onToggleDarkMode }) => {
 
                 {openDropdown && (
                   <ul className="mobileMenu-dropdown">
+                
                     <li>
-                      <Link
-                        href="#"
-                        onClick={closeDropdown}
-                        className="mobileMenu-link"
-                      >
-                        My Account
+                      <Link href="#" onClick={closeDropdown} className="dropdown-link">
+                        <User size={18} /> <span>My Account</span>
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        href="#"
-                        onClick={closeDropdown}
-                        className="mobileMenu-link"
-                      >
-                        Logout
+                      <Link href="#" onClick={closeDropdown} className="dropdown-link">
+                        <LogOut size={18} /> <span>Logout</span>
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        href="#"
-                        onClick={closeDropdown}
-                        className="mobileMenu-link"
-                      >
-                        Get Help
+                      <Link href="#" onClick={closeDropdown} className="dropdown-link">
+                        <HelpCircle size={18} /> <span>Get Help</span>
                       </Link>
                     </li>
+               
                   </ul>
                 )}
               </li>
             </ul>
           </div>
+
+
         </div>
       </div>
     </>

@@ -321,6 +321,7 @@ main .container {
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 }
 
 .custom-select {
@@ -951,6 +952,9 @@ main .container {
     padding: 20px;
     height: calc(100% - 80px);
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .mobile-menu-section {
@@ -970,7 +974,6 @@ main .container {
     font-family: var(--heading-font);
     font-size: 18px;
     font-weight: 500;
-    margin-bottom: 15px;
     color: var(--primary-color);
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 10px;
@@ -992,7 +995,7 @@ main .container {
     font-size: 16px;
     font-weight: 500;
     color: var(--primary-color);
-    padding: 10px;
+    padding-left: 3px;
     border-radius: 8px;
     transition: all 0.3s ease;
 }
@@ -10353,3 +10356,33 @@ input:checked+.slider:before {
   width: 240px; /* open width */
 }
 
+#account{
+    border-radius: 6px;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+.dark-mode #account{
+    background: #000;
+}
+
+#logout{
+    padding-left: 10px;
+}
+
+@media (max-width: 575px) {
+    .overlay-grid{
+       grid-template-columns: repeat(1, 1fr);
+    }    
+}
+
+@media (max-width: 992px) {
+    .sidebar-menu .dropdown{
+        display: flex;
+        padding: 0 0 0 0;
+    }
+}
+
+.crm-drodown{
+    border: 2px solid;
+}

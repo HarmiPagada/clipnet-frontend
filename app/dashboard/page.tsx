@@ -7,9 +7,6 @@ import { useEffect, useState } from 'react'
 // import './dashboard.css'
 import '../styles/dashboard.css';
 
-import Header from '@/components/Header'
-import Sidebar from '@/components/Sidebar'
-
 // Chart.js imports
 import {
   Chart as ChartJS,
@@ -215,17 +212,6 @@ export default function DashboardPage() {
   }, []);
 
   return (
-    // <div>
-
-    //   <Header 
-    //     darkMode={darkMode}
-    //     onToggleDarkMode={toggleDarkMode}
-    //   />
-    //   <main>
-    //     <div className="container">
-    //       <div className="main-content">
-    //         <Sidebar/>
-
              
               <div className="left-content">
 
@@ -474,11 +460,6 @@ export default function DashboardPage() {
                 </div>
               </div>
 
-    //       </div>
-    //     </div>
-    //   </main>
-
-    // </div>
   
   )
 }
